@@ -1,0 +1,104 @@
+
+{"activity": "poll",
+    "instructors": ["JunyeHuang"],
+    "results_filename": 'answers/advanced_circuits.results',
+    "items": [
+        {
+            "id": "1", 
+            "question":  
+            """
+            <h4><samp>lhs</ samp>回路と<samp>rhs</ samp>回路をどのようにマージすれば<samp>final</ samp>回路を形成できますか？
+            <br/>
+            lhs: <img align="middle" src="questions/advanced_circuits_images/lhs.png" width=260px>
+            rhs: <img align="middle" src="questions/advanced_circuits_images/rhs.png" width=230px>
+            final: <img align="middle" src="questions/advanced_circuits_images/merged.png" width=350px>
+            </h4>
+     
+            """,       
+            "type": "multiple choice",
+            "options": [
+             '<pre>lhs.append(rhs)</pre>',
+             '<pre>lhs.combine(rhs)</pre>',
+             '<pre>lhs.compose(rhs)</pre>',
+             '<pre>lhs+rhs</pre>',
+             "上記のいずれでもない。"    
+        ]},
+        
+        {
+            "id": "2", 
+            "question":  
+            """
+            <h4><samp>QuantumVolume(num_qubits=5, depth=5)</samp>回路を基本ゲート<samp>[u3,cx]<samp>に分解した後の深さはいくつですか？
+            </h4>
+     
+            """,       
+            "type": "multiple choice",
+            "options": [
+             '5',
+             '10',
+             '25',
+             '35',
+             "上記のいずれでもない。"    
+        ]},
+
+        {
+            "id": "3", 
+            "question":  
+            """
+            <h4> 
+            Qiskit回路ライブラリで、現在利用できないゲート/回路はどれですか？
+            </h4>
+            """,       
+            "type": "multiple choice",
+            "options": [
+                '<pre>HGate</pre>',
+                '<pre>NAND</pre>',
+                '<pre>QFT</pre>',
+                '<pre>QuantumVolume</pre>',
+             "上記のいずれでもない。"    
+        ]},
+        
+        {
+            "id": "4", 
+            "question":  
+            """
+            <h4>次の<samp>Operators</ samp>のうち、どれが他と異なりますか？
+            </h4>
+     
+            """,       
+            "type": "multiple choice",
+            "options": [
+             "<pre>Operator(Pauli(label='XZ'))</pre>",
+             "<pre>Operator(Pauli(label='X')).tensor(Operator(Pauli(label='Z')))</pre>",
+             """
+<pre>qc = QuantumCircuit(2)
+qc.x(0)
+qc.z(1)
+Operator(qc)</pre>
+             """,
+             "<pre>Operator([[0, 0, 1, 0], [0, 0, 0, -1], [1, 0, 0, 0], [0, -1, 0, 0]])</pre>",
+             "上記のいずれでもない。"    
+        ]},
+
+        {
+          "id": "5", 
+          "question":  
+          """
+          <h4><samp>LookaheadSwap</samp>パスだけを使用して次の量子回路をトランスパイルした結果、量子回路にはいくつのゲートがありますか？ 次の結合マップを想定します: <samp>[[0, 1], [1, 2], [2, 3], [3, 4]]</samp>
+          
+          <h4> <img align="middle" src="questions/advanced_circuits_images/tpl_circuit.png" width=250px><br/>
+   
+          </h4>
+   
+          """,       
+          "type": "multiple choice",
+          "options": [
+           "6",
+           "8",
+           "9",
+           "12",
+           "上記のいずれでもない。"    
+        ]},
+   ]
+   }
+   

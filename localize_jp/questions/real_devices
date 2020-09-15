@@ -1,0 +1,45 @@
+
+{"activity": "poll",
+    "instructors": ["JunyeHuang"],
+    "results_filename": 'answers/real_devices.results',
+    "items": [
+        {
+            "id": "1", 
+            "question":  
+            """
+            <h4>
+            前のセクションにあった以下の回路を実行するために、最もビジーでないデバイスをどのように見つればよいですか？
+            <img align="middle" src="questions/advanced_circuits_images/merged.png" width=400px>
+            </h4>
+     
+            """,       
+            "type": "multiple choice",
+            "options": [
+             '<pre>least_busy(provider.backends())</pre>',
+             '<pre>least_busy(provider.backends(filters=lambda x: x.configuration().n_qubits >= 5))</pre>',
+             '''<pre>provider.backends(filters=lambda x: x.configuration().n_qubits >= 5
+and not x.configuration().simulator
+and x.status().operational==True)</pre>''',
+             '1 と 3 の両方が正しい。',
+             "上記のいずれでもない。"    
+        ]},
+        {
+            "id": "2", 
+            "question":  
+            """
+            <h4>
+            最後に実行したジョブをバックエンドからどのように取得しますか？
+            </h4>
+     
+            """,       
+            "type": "multiple choice",
+            "options": [
+             '<pre>backend.jobs()[0]</pre>',
+             '<pre>backend.jobs()[-1]</pre>',
+             '<pre>backend.retrieve_job()[0]</pre>',
+             '<pre>backend.retrieve_job()[-1]</pre>',
+             "上記のいずれでもない。"    
+        ]},
+   ]
+   }
+   
