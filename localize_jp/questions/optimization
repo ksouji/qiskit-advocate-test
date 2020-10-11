@@ -8,7 +8,7 @@
             "question":  
             """
             <h4>
-            Which of the following statement is incorrect for this <samp>QuadraticProgram</samp>?
+            <samp>QuadraticProgram</samp>について、以下のうち正しくない文はどれですか？
             <br />
             <br />
             <pre>
@@ -22,25 +22,25 @@ mod.minimize(constant = 3, linear=[1,-2], quadratic={('x', 'y'): 2})
             """,       
             "type": "multiple choice",
             "options": [
-                'It has two variables',
-                'The objective is to minimise x - 2 y + 2 x^2 + 2 y^2 + 3',
-                'It has no constraints',
-                'It is a Quadratic Unconstrained Binary Optimization (QUBO) problem', 
-                "None of the above"    
+                '2つの変数がある。',
+                '目的は、 x - 2 y + 2 x^2 + 2 y^2 + 3 を最小化することである。',
+                '制約はない。',
+                'Quadratic Unconstrained Binary Optimization (QUBO) の問題である。', 
+                "上記のいずれでもない。"    
         ]},
         {
             "id": "2", 
             "question":  
             """
             <h4>
-            What kinds of minimum eigen solvers can be used for the <samp>MinimumEigenOptimizer</samp>?
+            <samp>MinimumEigenOptimizer</samp>では、どのような種類の最小固有ソルバー（minimum eigen solver）を使用できますか？
             <br />
             <br />
             <pre>
 problem = QuadraticProgram()
-# specify problem here
-# specify minimum eigen solver to be used
-mes = <span style="color:red;">(*what can be here?*)</span>
+# ここで問題を指定
+# 使用する最小固有ソルバーを指定
+mes = <span style="color:red;">(*ここには何が入りますか？*)</span>
 optimizer = MinimumEigenOptimizer(mes)
 result = optimizer.solve(problem)
             </pre>
@@ -52,15 +52,15 @@ result = optimizer.solve(problem)
                 '<pre>VQE(...)</pre>',
                 '<pre>QAOA(...)</pre>',
                 '<pre>NumpyMinimumEigensolver(...)</pre>',
-                'All of the above',
-                "None of the above"    
+                '上記のすべて。',
+                "上記のいずれでもない。"    
         ]},
         {
             "id": "3", 
             "question":  
             """
             <h4>
-            Which optimizers in Qiskit can be used to solve Quadratic Unconstrained Binary Optimization (QUBO) problems?
+            Qiskitのどのオプティマイザを使用すれば、Quadratic Unconstrained Binary Optimization (QUBO) の問題を解決できますか？
             </h4>
             """,       
             "type": "multiple choice",
@@ -68,8 +68,8 @@ result = optimizer.solve(problem)
                 '<pre>MinimumEigenOptimizer</pre>',
                 '<pre>GroverOptimizer</pre>',
                 '<pre>CobylaOptimizer</pre>',
-                'Both 1 & 2',
-                "All of the above"   
+                '１と２の両方。',
+                "上記のすべて。"   
         ]},
    ]
    }

@@ -18,17 +18,15 @@
           ''',
           "type": "multiple choice",
           "options": [
-           'Qubits in state <img src="http://latex.codecogs.com/svg.latex?\\vert1\\rangle" border="0"/> decay down to <img src="http://latex.codecogs.com/svg.latex?\\vert0\\rangle" border="0"/> before measurement. The decay times for both qubits are equal.',
-           'Qubits in state <img src="http://latex.codecogs.com/svg.latex?\\vert0\\rangle" border="0"/> decay down to <img src="http://latex.codecogs.com/svg.latex?\\vert1\\rangle" border="0"/> before measurement. The decay time for <samp>q0</samp> is shorter than that for <samp>q1</samp>.',
-           'Qubits in state <img src="http://latex.codecogs.com/svg.latex?\\vert1\\rangle" border="0"/> decay down to <img src="http://latex.codecogs.com/svg.latex?\\vert0\\rangle" border="0"/> before measurement. The decay time for <samp>q0</samp> is longer than that for <samp>q1</samp>.',
-           'Qubits in state <img src="http://latex.codecogs.com/svg.latex?\\vert0\\rangle" border="0"/> decay down to <img src="http://latex.codecogs.com/svg.latex?\\vert1\\rangle" border="0"/> before measurement. The decay time for <samp>q0</samp> is longer than that for <samp>q1</samp>.',
-           'Qubits in state <img src="http://latex.codecogs.com/svg.latex?\\vert1\\rangle" border="0"/> decay down to <img src="http://latex.codecogs.com/svg.latex?\\vert0\\rangle" border="0"/> before measurement. The decay time for <samp>q0</samp> is shorter than that for <samp>q1</samp>.',
+           '測定前に、<img src="http://latex.codecogs.com/svg.latex?\\vert1\\rangle" border="0"/>状態の量子ビットが<img src="http://latex.codecogs.com/svg.latex?\\vert0\\rangle" border="0"/>に減衰する。減衰時間は、両方の量子ビットで等しい。',
+           '測定前に、<img src="http://latex.codecogs.com/svg.latex?\\vert0\\rangle" border="0"/>状態の量子ビットが<img src="http://latex.codecogs.com/svg.latex?\\vert1\\rangle" border="0"/>に減衰する。<samp>q0</samp>の減衰時間は、<samp>q1</samp>より短い。',
+           '測定前に、<img src="http://latex.codecogs.com/svg.latex?\\vert1\\rangle" border="0"/>状態の量子ビットが<img src="http://latex.codecogs.com/svg.latex?\\vert0\\rangle" border="0"/>に減衰する。<samp>q0</samp>の減衰時間は、<samp>q1</samp>より長い',
+           '測定前に、<img src="http://latex.codecogs.com/svg.latex?\\vert0\\rangle" border="0"/>状態の量子ビットが<img src="http://latex.codecogs.com/svg.latex?\\vert1\\rangle" border="0"/>に減衰する。<samp>q0</samp>の減衰時間は、<samp>q1</samp>より長い',
+           '測定前に、<img src="http://latex.codecogs.com/svg.latex?\\vert1\\rangle" border="0"/>状態の量子ビットが<img src="http://latex.codecogs.com/svg.latex?\\vert0\\rangle" border="0"/>に減衰する。<samp>q0</samp>の減衰時間は、<samp>q1</samp>より短い',
        ]}, 
          {"id": "2", 
           "question":  '''
-   <h4>The noise that caused the calibration matrix in the previous question depends on an array of <img src="http://latex.codecogs.com/svg.latex?T_1" border="0"/> times, where the element <samp>T1[j]</samp> is the decay time of the qubit <samp>qr[j]</samp> during measurement.
-   
-   Once this has been defined, the noise is simulated with
+   <h4>前の質問のキャリブレーション行列で引き起こされたノイズは、<img src="http://latex.codecogs.com/svg.latex?T_1" border="0"/>時間の配列に依存します。ここで、要素<samp>T1[j]</samp>は、測定中の量子ビット<samp>qr[j]</samp>の減衰時間です。これが定義されると、ノイズは次のようにシミュレートされます。
    <pre>
 
 T2 = [1,1] # arbitrarily chosen T2 times
@@ -39,7 +37,7 @@ for j in range(2):
 
     </pre>
    
-   Which <img src="http://latex.codecogs.com/svg.latex?T_1" border="0"/> times create a calibration matrix closest to the one shown above?</h4>
+   上に示したものに最も近いキャリブレーション行列を作成する<img src="http://latex.codecogs.com/svg.latex?T_1" border="0"/>時間はどれですか？</h4>
           ''',
           "type": "multiple choice",
           "options": [
@@ -53,13 +51,11 @@ for j in range(2):
           {"id": "3", 
           "question":  '''
    <h4>
-   To calculate Quantum Volume, we test whether a certain condition is satisfied for random circuits 
-   applied to successivly larger sets of qubits. These can be made out of any qubits you have available. 
-   For example, the tutorial on quantum volume uses
+   量子ボリュームを計算するために、より大きな量子ビットのセットに連続で適用されるランダム回路に対して、特定の条件が満たされるかどうかをテストします。 これらは、利用可能な任意の量子ビットから作成できます。たとえば、量子ボリュームのチュートリアルでは以下を使用しています。
    <pre>
            qubit_lists = [[0,1,3],[0,1,3,5],[0,1,3,5,7],[0,1,3,5,7,10]]
    </pre>
-   Let's extend the 2-qubit noise model from the previous question to 5 qubits.
+   前の質問から2量子ビットのノイズモデルを5量子ビットに拡張してみましょう。
    <pre>
 
 n = 5
@@ -71,7 +67,7 @@ for j in range(n):
     noise_thermal.add_quantum_error( thermal_relaxation_error(T1[j], T2[j], time_measure) , "measure", [j])
    </pre>
    
-   Which of the following would be most sensible for calculating quantum volume, given the decay times on each qubit?</h4>
+   各量子ビットの減衰時間を考えると、量子ボリュームを計算するのに最も気の利いたものは次のうちどれですか？</h4>
           ''',
           "type": "multiple choice",
           "options": [
@@ -79,7 +75,7 @@ for j in range(n):
            '<samp>[[0,1,2],[0,1,2,3],[0,1,2,3,4]]</samp>',
            '<samp>[[0,2,4],[0,1,2,4],[0,1,2,3,4]]</samp>',
            '<samp>[[2,3,4],[1,2,3,4],[0,1,2,3,4]]</samp>',
-           'None of the above',
+           '	',
           ]},    
        ]
    }
