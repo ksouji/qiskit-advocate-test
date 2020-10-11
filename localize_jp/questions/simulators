@@ -121,7 +121,7 @@ qc.cx(0,1)
              ]}, 
            {"id": "6", 
             "question":  '''
-            <h4>Which of these configuration options could result in the following result object/counts?<h4> 
+            <h4>これらの構成オプションのうち、次の結果オブジェクト/カウントになるのはどれですか？<h4> 
      <pre>
 qc = QuantumCircuit(2)
 qc.h([0,1])
@@ -145,9 +145,9 @@ print(memory)
          {"id": "7", 
                 "question": '''
                 <h4>
-                Clifford circuits can be efficiently simulated classically in Qiskit using <samp>Clifford</samp> class in the <samp>quantum_info</samp> module. 
+                クリフォード回路（Clifford circuits）は、<samp>quantum_info</samp>モジュールの<samp>Clifford</samp>クラスを使用して、Qiskitで古典的に効率的にシミュレーションできます。
                 <br />
-                Which of the following is not a Clifford gate?
+                クリフォードゲートではないのは次のうちどれですか？
                 </h4>
                 ''',
                 "type": "multiple choice",

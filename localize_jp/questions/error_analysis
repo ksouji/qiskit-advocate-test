@@ -6,15 +6,12 @@
          {"id": "1", 
           "question":  '''
     <h4>
-    The image below shows the calibration matrix for two qubits. What kind of noise caused this?
+    以下の画像は、２量子ビットの校正行列を示しています。これはどのようなノイズが原因ですか？
     <br />
     <br />
-    Remember that a short decay time means more of the noise can be expected to have happened. 
+    短い減衰時間はノイズの発生が予想される、ということを意味します。
     <br />
-    Also note that in Qiskit qubit ordering is <samp>q1q0</samp>,
-    e.g. <img src="http://latex.codecogs.com/svg.latex?\\vert01\\rangle" border="0"/> 
-    means <samp>q1</samp> is <img src="http://latex.codecogs.com/svg.latex?\\vert0\\rangle" border="0"/> 
-    and <samp>q0</samp> is <img src="http://latex.codecogs.com/svg.latex?\\vert1\\rangle" border="0"/>.
+    また、Qiskitにおける量子ビットの順序はq1q0です。<img src="http://latex.codecogs.com/svg.latex?\\vert01\\rangle" border="0"/>は、<samp>q1</samp>が<img src="http://latex.codecogs.com/svg.latex?\\vert0\\rangle" border="0"/>、<samp>q0</samp>が<img src="http://latex.codecogs.com/svg.latex?\\vert1\\rangle" border="0"/>ということです。
     <br />
     <img src="questions/error_analysis_images/calib.png"> 
     </h4>
